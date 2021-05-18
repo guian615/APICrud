@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
     include_once('nav.php');
 ?>
@@ -11,19 +12,19 @@
             </div>
             <div class="col-sm">
                 <div class="row justify-content-center">
-                    <form action="http://192.168.0.21:8081/patAndGuian/insert.php" method="POST">
+                    <form>
                         <div class="form-group mt-3">
-                            <h3 class="text-center text-light bg-dark" style="border-radius:20px;">Input Field</h3>
+                            <h3 class="text-center text-light bg-primary" style="border-radius:20px;">Add Data</h3>
                             <label class="text-primary">
                                 <h5>Name:</h5>
                             </label>
-                            <input type="text" name="Name" class="form-control bg-dark text-light mt-1"
+                            <input type="text" name="Name" class="form-control bg-primary text-light mt-1 name"
                                 placeholder="Enter Name"
                                 style="border-radius:10px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                             <label class="text-primary mt-3">
                                 <h5>Email Address:</h5>
                             </label>
-                            <input type="email" name="Email" class="form-control bg-dark text-light"
+                            <input type="email" name="Email" class="form-control bg-primary text-light email"
                                 placeholder="Enter Email"
                                 style="border-radius:10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         </div>
@@ -31,13 +32,13 @@
                             <label class="text-primary">
                                 <h5>Password</h5>
                             </label>
-                            <input type="password" name="Password" class="form-control bg-dark text-light"
+                            <input type="password" name="Password" class="form-control bg-primary text-light password"
                                 placeholder="Enter Password"
                                 style="border-radius:10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         </div>
                         <div class="form-group">
                             <div class="mt-3">
-                                <button type="submit" class="btn btn-primary" name="save" style="border-radius:20px;width: 100%;
+                                <button type="button" class="btn btn-primary btnInsert" name="save" style="border-radius:20px;width: 100%;
                                      padding: 15px;
                                      border: 0;
                                      font-size: 1.2em;
@@ -54,6 +55,12 @@
 
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="ajax_request.js"></script>
+
+    <script>
+   
+    </script>
 
 </body>
 
